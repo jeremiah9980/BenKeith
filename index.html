@@ -89,21 +89,6 @@
   blockquote{margin:2rem 0;padding:0 0 0 1.25rem;border-left:3px solid var(--amber);font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:300;line-height:1.35;max-width:var(--measure)}
   blockquote cite{display:block;font-family:var(--body);font-style:normal;font-size:.9rem;color:var(--ink-soft);margin-top:.75rem}
 
-  /* video + figures */
-  .film{padding:clamp(2.5rem,6vw,4.5rem) 0;border-bottom:1px solid var(--rule)}
-  .player{background:#0B1220;border:1px solid var(--rule);aspect-ratio:16/9;max-width:var(--max);margin:1.5rem auto 0}
-  .player video{width:100%;height:100%;display:block;object-fit:contain;background:#0B1220}
-  .film .cap{font-size:.9rem;color:var(--ink-soft);margin:.9rem 0 0;font-family:var(--mono);letter-spacing:.02em}
-  figure{margin:2.25rem 0 0}
-  figure img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
-  figcaption{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);margin-top:.6rem}
-  .pair{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem;align-items:start}
-  .pair figure{margin:0}
-  @media (max-width:40rem){.pair{grid-template-columns:1fr}}
-  .card img{display:block;width:100%;height:auto;margin:-1.6rem -1.6rem 1.25rem;width:calc(100% + 3.2rem);max-width:none;border-bottom:1px solid var(--rule)}
-  .words p{font-family:var(--display);font-weight:300;font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.55}
-  .words .note{font-family:var(--body);font-size:.9rem;color:var(--ink-soft)}
-
   footer{padding:2.5rem 0 3.5rem;color:var(--ink-soft);font-size:.9rem}
   footer p{margin:0 0 .5rem}
 
@@ -127,10 +112,8 @@
   <header class="top">
     <span class="mark">08 · 28 · 2026</span>
     <nav aria-label="Sections">
-      <a href="#film">Watch</a>
       <a href="#story">What happened</a>
       <a href="#people">The people</a>
-      <a href="#words">Jeremiah's words</a>
       <a href="#thanks">Thank you</a>
     </nav>
   </header>
@@ -142,20 +125,6 @@
   </div>
 </div>
 
-<section id="film" class="film">
-  <div class="wrap">
-    <p class="eyebrow">Watch</p>
-    <h2 class="measure">The night, the wreck, and the man who ran at it. Told by Jeremiah.</h2>
-    <div class="player">
-      <video controls preload="metadata" poster="media/poster.jpg" playsinline>
-        <source src="media/three-minutes.mp4" type="video/mp4">
-        Your browser can't play this video. <a href="media/three-minutes.mp4">Download it instead.</a>
-      </video>
-    </div>
-    <p class="cap">2 min 38 sec · captioned · footage from the scene, the wreck, the hospital, and the night Ben was recognized</p>
-  </div>
-</section>
-
 <section id="story">
   <div class="wrap story">
     <p class="eyebrow">What happened</p>
@@ -163,17 +132,7 @@
     <div class="measure reveal">
       <p>Cooper was driving back from donating plasma when he lost consciousness at the wheel. The car left the road, rolled, and caught fire. The safety systems that are supposed to protect you in a crash held him in place, and he couldn't get himself out.</p>
       <p>Ben Keith was getting into his own car nearby when dirt, mud, and pieces of a vehicle rained down on him. He turned around and ran at the fire. He pulled Cooper out of the car and got him behind a dumpster, in case the car exploded. Kristen Snook and her husband, and others whose names we're still collecting, stayed with Cooper on the ground so he wasn't alone.</p>
-      <p>Jesica got there seven minutes after the crash alert hit her phone. Cooper spent that night in the ICU and four days in the hospital with a broken back, sternum, and ribs. He's home now, healing. When he came to, one of the first things he asked was whether anyone had gotten the names of the people who helped him.</p>
-    </div>
-    <div class="pair">
-      <figure class="reveal">
-        <img src="media/fire.jpg" alt="The car on fire at night beside round hay bales, a man walking away from it with a fire extinguisher" loading="lazy">
-        <figcaption>The scene, minutes after the crash. Cooper was already out.</figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="media/wreck.jpg" alt="The crushed and burned car in daylight, driver's side caved in" loading="lazy">
-        <figcaption>The car, the next day. Nobody drives away from this on their own.</figcaption>
-      </figure>
+      <p>Jesica got there seven minutes after the crash alert hit her phone. Cooper spent that night and most of the next day in the ICU. When he came to, one of the first things he asked was whether anyone had gotten the names of the people who helped him.</p>
     </div>
     <blockquote class="reveal">
       "Those people saved my life."
@@ -219,10 +178,9 @@
     <h2 class="measure">They thought they were stopping at an accident. To us they're the reason we still have him.</h2>
     <div class="people">
       <article class="card lead reveal">
-        <img src="media/ceremony.jpg" alt="Cooper, Ben Keith, Katherine, and a police officer standing together as Ben is presented a certificate" loading="lazy">
         <p class="role">Pulled him out</p>
         <h3>Ben Keith</h3>
-        <p>Got showered with debris while getting into his car, ran toward the fire, pulled Cooper from the wreck, and carried him behind a dumpster in case it blew. Didn't wait to see if anyone else would. He was recognized for it in front of the community, with Cooper standing next to him.</p>
+        <p>Got showered with debris while getting into his car, ran toward the fire, pulled Cooper from the wreck, and moved him behind a dumpster in case it blew. Didn't wait to see if anyone else would.</p>
       </article>
       <article class="card reveal">
         <p class="role">Stayed with him</p>
@@ -235,28 +193,6 @@
         <p>People who called 911, called Jesica, held a light, waved traffic off, or just stood close. If that was you, or you know who it was, we want your name. Not for anything but to say it back to you.</p>
       </article>
     </div>
-  </div>
-</section>
-
-<section id="words">
-  <div class="wrap words">
-    <p class="eyebrow">In Jeremiah's words</p>
-    <h2 class="measure">What I said in the video, written down.</h2>
-    <div class="measure reveal">
-      <p>I want to take a minute out and thank a man named Ben Keith.</p>
-      <p>On August 28th, Jesica and I got an emergency alert from Cooper's phone: <em>Crash Detected. Cooper Green called emergency services after iPhone detected a crash.</em> The next two to three minutes were pure panic. Grabbing whatever we could. Get in, get in the car. Jesica dialing Cooper's phone over and over and over again. No answer.</p>
-      <p>Then we realized the fire trucks were going the other way. So we turned around and pulled in with the fire trucks on scene. Right before we did, a woman called Jesica's phone and told us he'd been pulled out. That was the first breath either of us had taken.</p>
-      <p>He was trapped inside and couldn't get himself out. Ben Keith was right there. Debris from the crash rained down on him, and instead of backing away from a burning car, that man ran to it, pulled Cooper out, carried him behind the dumpster, and shielded him in case the car blew.</p>
-      <p>I knew before I even knew what he had done. He had that look of someone who just did God's work. No smile, no tears. Sitting right alongside the trauma. He was whole because he acted the way a man should.</p>
-      <p>Cooper spent four days in the hospital with a broken back, sternum, and ribs. He's home now, healing. When he woke up in the ICU he told his mom: find those people. Those people saved my life.</p>
-      <p>Ben, you've got a family in all of us, for life. To the woman who stayed with Cooper and called us, to Kristen Snook and her husband, and to every stranger who stood by him until his mama got there: this community showed us who it was that night.</p>
-      <p>Hug your people tighter tonight. And if the moment ever comes, be a Ben Keith.</p>
-      <p class="note">Transcribed from the video above and lightly cleaned up for reading.</p>
-    </div>
-    <figure class="reveal measure">
-      <img src="media/hospital.jpg" alt="Cooper sitting up in a hospital bed in a neck brace, talking with a nurse" loading="lazy">
-      <figcaption>Cooper, awake and asking for names.</figcaption>
-    </figure>
   </div>
 </section>
 
