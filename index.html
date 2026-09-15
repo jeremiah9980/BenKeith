@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three minutes — thank you to the people who saved Cooper</title>
+<meta name="description" content="On August 28, 2026, strangers ran toward a burning car and pulled Cooper Green out. This page is our family's thank you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dusk:#EEF1F6;      /* page */
+    --paper:#F8F9FC;     /* cards */
+    --ink:#17233A;       /* text */
+    --ink-soft:#4A5872;  /* secondary */
+    --rule:#CDD4E1;
+    --amber:#C98A2B;     /* the one warm light */
+    --amber-soft:#F3E3C2;
+    --display:"Fraunces", Georgia, serif;
+    --body:"Nunito Sans", system-ui, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, monospace;
+    --max:68rem;
+    --measure:38rem;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--dusk);color:var(--ink);
+    font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+  .measure{max-width:var(--measure)}
+
+  /* nav */
+  .top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-size:.9rem;color:var(--ink-soft)}
+  .top nav a{text-decoration:none;margin-left:1.25rem}
+  .top nav a:hover{color:var(--ink);text-decoration:underline}
+  .top .mark{font-family:var(--mono);letter-spacing:.04em}
+
+  /* hero */
+  .hero{padding:clamp(3rem,9vw,7rem) 0 clamp(2.5rem,6vw,4rem);border-bottom:1px solid var(--rule)}
+  .hero .date{font-family:var(--mono);font-size:.85rem;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase}
+  .hero h1{
+    font-family:var(--display);font-weight:300;font-variation-settings:"opsz" 144;
+    font-size:clamp(3rem,10vw,7.5rem);line-height:.95;letter-spacing:-.02em;margin:.75rem 0 1.25rem;
+  }
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--amber)}
+  .hero p.lede{font-size:clamp(1.15rem,1.8vw,1.35rem);color:var(--ink-soft);margin:0}
+
+  /* sections */
+  section{padding:clamp(3rem,7vw,5.5rem) 0;border-bottom:1px solid var(--rule)}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:0 0 1rem}
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.75rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 1.5rem}
+  p{margin:0 0 1.15rem}
+  .story p:first-of-type::first-letter{font-family:var(--display);font-size:3.4em;float:left;line-height:.8;padding:.08em .1em 0 0;color:var(--amber);font-weight:500}
+
+  /* timeline — the signature */
+  .timeline{list-style:none;margin:2.5rem 0 0;padding:0;position:relative}
+  .timeline::before{content:"";position:absolute;left:clamp(6.5rem,12vw,9.5rem);top:.5rem;bottom:.5rem;width:1px;background:var(--rule)}
+  .timeline li{display:grid;grid-template-columns:clamp(6.5rem,12vw,9.5rem) 1fr;gap:0 2rem;padding:1.5rem 0;position:relative}
+  .timeline .t{font-family:var(--mono);font-size:clamp(1.6rem,3.4vw,2.6rem);font-weight:500;line-height:1;letter-spacing:-.02em;color:var(--ink);padding-top:.1rem}
+  .timeline .t small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:.5rem;font-weight:400}
+  .timeline li::after{content:"";position:absolute;left:calc(clamp(6.5rem,12vw,9.5rem) - 5px);top:2.1rem;width:11px;height:11px;border-radius:50%;background:var(--dusk);border:2px solid var(--ink-soft)}
+  .timeline li.fire::after{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 6px var(--amber-soft)}
+  .timeline .what{max-width:var(--measure)}
+  .timeline .what strong{display:block;font-weight:700;margin-bottom:.25rem}
+  .timeline .what p{margin:0;color:var(--ink-soft)}
+  .gap{font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);color:var(--ink-soft);margin:2rem 0 0;max-width:var(--measure)}
+
+  /* people */
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.25rem;margin-top:2rem}
+  .card{background:var(--paper);border:1px solid var(--rule);padding:1.6rem 1.6rem 1.5rem}
+  .card h3{font-family:var(--display);font-weight:500;font-size:1.45rem;margin:0 0 .5rem;line-height:1.15}
+  .card .role{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin:0 0 .9rem}
+  .card p{color:var(--ink-soft);margin:0;font-size:1rem}
+  .card.lead{border-color:var(--amber);border-width:1px 1px 1px 5px}
+
+  /* letters */
+  .letter{background:var(--paper);border:1px solid var(--rule);padding:clamp(1.5rem,4vw,3rem);max-width:var(--measure);margin-top:2rem}
+  .letter p{font-family:var(--display);font-weight:300;font-size:1.2rem;line-height:1.6}
+  .letter .sig{font-family:var(--body);font-size:.95rem;color:var(--ink-soft);margin:1.75rem 0 0}
+  .letter.pending{border-style:dashed}
+  .letter.pending p{color:var(--ink-soft);font-style:italic}
+
+  blockquote{margin:2rem 0;padding:0 0 0 1.25rem;border-left:3px solid var(--amber);font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:300;line-height:1.35;max-width:var(--measure)}
+  blockquote cite{display:block;font-family:var(--body);font-style:normal;font-size:.9rem;color:var(--ink-soft);margin-top:.75rem}
+
+  /* video + figures */
+  .film{padding:clamp(2.5rem,6vw,4.5rem) 0;border-bottom:1px solid var(--rule)}
+  .player{background:#0B1220;border:1px solid var(--rule);aspect-ratio:16/9;max-width:var(--max);margin:1.5rem auto 0}
+  .player video{width:100%;height:100%;display:block;object-fit:contain;background:#0B1220}
+  .film .cap{font-size:.9rem;color:var(--ink-soft);margin:.9rem 0 0;font-family:var(--mono);letter-spacing:.02em}
+  figure{margin:2.25rem 0 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+  figcaption{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);margin-top:.6rem}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem;align-items:start}
+  .pair figure{margin:0}
+  @media (max-width:40rem){.pair{grid-template-columns:1fr}}
+  .card img{display:block;width:100%;height:auto;margin:-1.6rem -1.6rem 1.25rem;width:calc(100% + 3.2rem);max-width:none;border-bottom:1px solid var(--rule)}
+  .words p{font-family:var(--display);font-weight:300;font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.55}
+  .words .note{font-family:var(--body);font-size:.9rem;color:var(--ink-soft)}
+
+  footer{padding:2.5rem 0 3.5rem;color:var(--ink-soft);font-size:.9rem}
+  footer p{margin:0 0 .5rem}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  @media (max-width:40rem){
+    .timeline::before{left:5.2rem}
+    .timeline li{grid-template-columns:5.2rem 1fr;gap:0 1.1rem}
+    .timeline li::after{left:calc(5.2rem - 5px)}
+    .timeline .t{font-size:1.4rem}
+    .top nav a{margin-left:.9rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <span class="mark">08 · 28 · 2026</span>
+    <nav aria-label="Sections">
+      <a href="#film">Watch</a>
+      <a href="#story">What happened</a>
+      <a href="#people">The people</a>
+      <a href="#words">Jeremiah's words</a>
+      <a href="#thanks">Thank you</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="date">Thursday evening, less than a mile from home</p>
+    <h1>Three <em>minutes.</em></h1>
+    <p class="lede measure">That's how long it took for an ordinary drive home to become a burning car with our son trapped inside. It's also about how long it took for strangers to decide he was worth running toward.</p>
+  </div>
+</div>
+
+<section id="film" class="film">
+  <div class="wrap">
+    <p class="eyebrow">Watch</p>
+    <h2 class="measure">The night, the wreck, and the man who ran at it. Told by Jeremiah.</h2>
+    <div class="player">
+      <video controls preload="metadata" poster="media/poster.jpg" playsinline>
+        <source src="media/three-minutes.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="media/three-minutes.mp4">Download it instead.</a>
+      </video>
+    </div>
+    <p class="cap">2 min 38 sec · captioned · footage from the scene, the wreck, the hospital, and the night Ben was recognized</p>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <p class="eyebrow">What happened</p>
+    <h2 class="measure">Cooper never saw it coming. Neither did anyone else.</h2>
+    <div class="measure reveal">
+      <p>Cooper was driving back from donating plasma when he lost consciousness at the wheel. The car left the road, rolled, and caught fire. The safety systems that are supposed to protect you in a crash held him in place, and he couldn't get himself out.</p>
+      <p>Ben Keith was getting into his own car nearby when dirt, mud, and pieces of a vehicle rained down on him. He turned around and ran at the fire. He pulled Cooper out of the car and got him behind a dumpster, in case the car exploded. Kristen Snook and her husband, and others whose names we're still collecting, stayed with Cooper on the ground so he wasn't alone.</p>
+      <p>Jesica got there seven minutes after the crash alert hit her phone. Cooper spent that night in the ICU and four days in the hospital with a broken back, sternum, and ribs. He's home now, healing. When he came to, one of the first things he asked was whether anyone had gotten the names of the people who helped him.</p>
+    </div>
+    <div class="pair">
+      <figure class="reveal">
+        <img src="media/fire.jpg" alt="The car on fire at night beside round hay bales, a man walking away from it with a fire extinguisher" loading="lazy">
+        <figcaption>The scene, minutes after the crash. Cooper was already out.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="media/wreck.jpg" alt="The crushed and burned car in daylight, driver's side caved in" loading="lazy">
+        <figcaption>The car, the next day. Nobody drives away from this on their own.</figcaption>
+      </figure>
+    </div>
+    <blockquote class="reveal">
+      "Those people saved my life."
+      <cite>Cooper, the day after</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <p class="eyebrow">The clock</p>
+    <h2 class="measure">Everything on this page happened between a text and a phone alert.</h2>
+    <ol class="timeline">
+      <li class="reveal">
+        <div class="t">8:28<small>PM</small></div>
+        <div class="what">
+          <strong>Jesica texts Cooper</strong>
+          <p>"Hey man, where are you at?" He should have been almost home. Something felt off before anything had happened.</p>
+        </div>
+      </li>
+      <li class="reveal fire">
+        <div class="t">8:31<small>PM</small></div>
+        <div class="what">
+          <strong>Crash alert</strong>
+          <p>Her phone reports that Cooper has been in an accident. By this point the car is already on fire and Ben Keith is already moving.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="t">8:38<small>PM</small></div>
+        <div class="what">
+          <strong>Jesica arrives</strong>
+          <p>Cooper is out of the car and behind cover, surrounded by people who had never met him and refused to leave.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="gap reveal">Seven minutes. He was never alone for any of them.</p>
+  </div>
+</section>
+
+<section id="people">
+  <div class="wrap">
+    <p class="eyebrow">The people</p>
+    <h2 class="measure">They thought they were stopping at an accident. To us they're the reason we still have him.</h2>
+    <div class="people">
+      <article class="card lead reveal">
+        <img src="media/ceremony.jpg" alt="Cooper, Ben Keith, Katherine, and a police officer standing together as Ben is presented a certificate" loading="lazy">
+        <p class="role">Pulled him out</p>
+        <h3>Ben Keith</h3>
+        <p>Got showered with debris while getting into his car, ran toward the fire, pulled Cooper from the wreck, and carried him behind a dumpster in case it blew. Didn't wait to see if anyone else would. He was recognized for it in front of the community, with Cooper standing next to him.</p>
+      </article>
+      <article class="card reveal">
+        <p class="role">Stayed with him</p>
+        <h3>Kristen Snook &amp; her husband</h3>
+        <p>Kept Cooper calm and covered on the ground, and made sure he was not alone for a single minute until his mom got there.</p>
+      </article>
+      <article class="card reveal">
+        <p class="role">Everyone else</p>
+        <h3>The ones we're still finding</h3>
+        <p>People who called 911, called Jesica, held a light, waved traffic off, or just stood close. If that was you, or you know who it was, we want your name. Not for anything but to say it back to you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap words">
+    <p class="eyebrow">In Jeremiah's words</p>
+    <h2 class="measure">What I said in the video, written down.</h2>
+    <div class="measure reveal">
+      <p>I want to take a minute out and thank a man named Ben Keith.</p>
+      <p>On August 28th, Jesica and I got an emergency alert from Cooper's phone: <em>Crash Detected. Cooper Green called emergency services after iPhone detected a crash.</em> The next two to three minutes were pure panic. Grabbing whatever we could. Get in, get in the car. Jesica dialing Cooper's phone over and over and over again. No answer.</p>
+      <p>Then we realized the fire trucks were going the other way. So we turned around and pulled in with the fire trucks on scene. Right before we did, a woman called Jesica's phone and told us he'd been pulled out. That was the first breath either of us had taken.</p>
+      <p>He was trapped inside and couldn't get himself out. Ben Keith was right there. Debris from the crash rained down on him, and instead of backing away from a burning car, that man ran to it, pulled Cooper out, carried him behind the dumpster, and shielded him in case the car blew.</p>
+      <p>I knew before I even knew what he had done. He had that look of someone who just did God's work. No smile, no tears. Sitting right alongside the trauma. He was whole because he acted the way a man should.</p>
+      <p>Cooper spent four days in the hospital with a broken back, sternum, and ribs. He's home now, healing. When he woke up in the ICU he told his mom: find those people. Those people saved my life.</p>
+      <p>Ben, you've got a family in all of us, for life. To the woman who stayed with Cooper and called us, to Kristen Snook and her husband, and to every stranger who stood by him until his mama got there: this community showed us who it was that night.</p>
+      <p>Hug your people tighter tonight. And if the moment ever comes, be a Ben Keith.</p>
+      <p class="note">Transcribed from the video above and lightly cleaned up for reading.</p>
+    </div>
+    <figure class="reveal measure">
+      <img src="media/hospital.jpg" alt="Cooper sitting up in a hospital bed in a neck brace, talking with a nurse" loading="lazy">
+      <figcaption>Cooper, awake and asking for names.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="thanks">
+  <div class="wrap">
+    <p class="eyebrow">Thank you</p>
+    <h2 class="measure">From our family</h2>
+
+    <div class="letter reveal">
+      <p>Ben, I'm Cooper's stepdad. There's no way to properly thank someone for running toward a burning car, but I'm going to try anyway.</p>
+      <p>You didn't hesitate. You got him out, got him behind cover, and stayed until his mom could get there. When Cooper woke up, the first thing he wanted was the names of the people who helped him, so he could thank them himself. He'll get that chance. But I wanted you to hear it from me first. Our family owes you more than we can say.</p>
+      <p class="sig">— Jeremiah</p>
+    </div>
+
+    <div class="letter reveal">
+      <p>To everyone who ran toward the danger, stayed with Cooper, called me, prayed for him, checked on us, or simply cared enough to reach out: there will never be words big enough for what you have done for our family. You gave me my son back.</p>
+      <p>Hug your people a little tighter tonight. Life can change in three minutes.</p>
+      <p class="sig">— Jesica</p>
+    </div>
+
+    <div class="letter pending reveal">
+      <p>Cooper's own thank you goes here, in his words, when he's ready to write it.</p>
+      <p class="sig">— Cooper</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Made by Cooper's family. If you were there that night and we haven't named you, please reach out so we can.</p>
+    <p class="mark" style="font-family:var(--mono);font-size:.8rem">August 28, 2026</p>
+  </div>
+</footer>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
