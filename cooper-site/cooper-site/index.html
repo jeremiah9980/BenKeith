@@ -115,6 +115,9 @@
     .legend { display: grid; gap: 12px; margin-top: 18px; }
     .legend div { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); line-height: 1.6; }
     .legend .k { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgba(255,255,255,0.08); border: 1px solid var(--border); display: grid; place-items: center; font-size: 1.05rem; }
+    .recon { margin: 18px 24px 24px; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: #15161a; }
+    .recon iframe { display: block; width: 100%; height: min(1100px, 88vh); border: 0; }
+    @media (max-width: 640px) { .recon { margin: 14px; } .recon iframe { height: 80vh; } }
     .footer { text-align: center; color: var(--muted); margin-top: 26px; font-size: 0.94rem; line-height: 1.7; }
 
     .lb { position: fixed; inset: 0; z-index: 50; background: rgba(4,9,18,0.94); display: none; align-items: center; justify-content: center; padding: 16px; }
@@ -184,7 +187,7 @@
         <div class="video-grid">
           <div class="video-card">
             <div class="frame">
-              <iframe src="https://www.youtube-nocookie.com/embed/t74VCM4wcWI?rel=0&modestbranding=1" title="The accident — August 28, 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/t74VCM4wcWI?si=sfUTxp-20I-X81fw" title="The accident — August 28, 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="vc"><h3>The Accident</h3><p>Video from the scene on August 28, 2026. Cooper was still inside when this started.</p></div>
           </div>
@@ -273,23 +276,12 @@
       </div>
     </section>
 
-    <section class="wide-grid">
-      <div class="panel section map-panel">
-        <a href="media/diagram-path.jpg" class="photo-link" data-cap="Where it happened — the path of the car, marked by Jeremiah on a satellite view"><img src="media/diagram-path.jpg" alt="Satellite view with the car's path marked: it left the road, ran along the shoulder past Dillon Donuts, and came to rest by the hay bales at Joe's Country Store" loading="lazy"></a>
+    <section class="panel section">
+      <div class="section-inner" style="padding-bottom:0">
+        <h2>Where It Happened</h2>
+        <p class="lead">An interactive reconstruction of the crash on FM 1764: the path the car took after Cooper lost consciousness, where it came to rest by the hay bales at Joe's Country Store, and where Ben, the dumpster, and the first units were. Scroll inside the frame, or <a href="media/crash-reconstruction.html" target="_blank" rel="noopener">open it full screen</a>.</p>
       </div>
-      <div class="panel section">
-        <div class="section-inner">
-          <h2>Where It Happened</h2>
-          <p class="lead">Satellite view of the stretch of road, marked up by Jeremiah. The car left the road, ran along the shoulder between the road and the businesses, passed Dillon Donuts, and came to rest by the hay bales at Joe's Country Store. That's the same stack of bales you can see behind the fire in the video.</p>
-          <div class="legend">
-            <div><span class="k">🚗</span><span>Where the car left the road, and where it stopped.</span></div>
-            <div><span class="k">➜</span><span>The path it traveled after Cooper lost consciousness.</span></div>
-            <div><span class="k">🟥</span><span>Dillon Donuts and the neighboring buildings. Ben was here, getting into his car, when the debris came down.</span></div>
-            <div><span class="k">🔥</span><span>Where it came to rest and caught fire. The dumpster Ben carried Cooper behind is nearby.</span></div>
-          </div>
-          <p class="lead" style="margin-top:18px">A close-up diagram with the fire truck and ambulance positions is coming; tap the map to open it full size.</p>
-        </div>
-      </div>
+      <div class="recon"><iframe src="media/crash-reconstruction.html" title="FM 1764 crash reconstruction" loading="lazy"></iframe></div>
     </section>
 
     <section class="panel section">
