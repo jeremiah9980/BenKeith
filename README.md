@@ -6,11 +6,10 @@ Static site, no build step.
 index.html
 media/
   hero.jpg, poster.jpg
-  three-minutes.mp4        (32 MB, 720p — compressed from the 127 MB original)
   stills/                  (24 frames from the video, full + thumbnail, with meta.json)
 ```
 
-The Community Lifesaver Award video is embedded from YouTube (yp7syAZahhA), so it isn't in the repo.
+The videos are embedded from YouTube (the accident t74VCM4wcWI, Three Minutes 7Z-dbSF3SyM, the Community Lifesaver Award yp7syAZahhA), so none of them are in the repo.
 
 ## Publish on GitHub Pages
 
